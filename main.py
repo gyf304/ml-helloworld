@@ -1,7 +1,7 @@
 import os
 
 COMET_EXPERIMENT_KEY = os.environ.get("COMET_EXPERIMENT_KEY")
-if COMET_EXPERIMENT_KEY is not None:
+if COMET_EXPERIMENT_KEY:
     print("Using CometML")
     from comet_ml import ExistingExperiment
     experiment = ExistingExperiment()
