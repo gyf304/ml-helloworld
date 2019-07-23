@@ -2,8 +2,9 @@ import os
 
 COMET_EXPERIMENT_KEY = os.environ.get("COMET_EXPERIMENT_KEY")
 if COMET_EXPERIMENT_KEY is not None:
-    from comet_ml import Experiment
-    experiment = Experiment(COMET_EXPERIMENT_KEY)
+    print("Using CometML")
+    from comet_ml import ExistingExperiment
+    experiment = ExistingExperiment()
 
 import tensorflow as tf
 
